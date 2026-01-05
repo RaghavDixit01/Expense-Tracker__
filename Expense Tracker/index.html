@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <button id="Changetheme">Change Theme</button>
+    <div id="expenseData">
+        <h1>Expense Tracker</h1>
+        <div id="expenseEntry">
+            <div id="expenseEnter">
+            <input type="date" id="expenseDate">
+            <input class="entries" type="number" id="entry1" placeholder="Amount"></input>
+            <input class="entries" type="text" id="entry2" placeholder="Category"></input>
+            <select class="entries" name="Paymentmethod" id="p_method" >
+                <option value="" disabled selected>Payment Method</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+                <option value="Cash">Cash</option>
+            </select>
+            </div>
+            <div id="note">
+                <textarea name="Note" id="Note" rows="10" cols="40" placeholder="Add Note....."  maxlength="100"></textarea>
+                <button id="sumbit">ADD EXPENSE</button>
+            </div>
+            <div>
+                <div id="totalDisplay">Total: ₹<span id="totalAmount">0</span></div>
+                <table >
+                    <thead>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Payment</th>
+                        <th>Note</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+
+            </div>
+            
+        </div> 
+        <canvas id="expenseChart" ></canvas>  
+        <button id="CSVdownload">Download CSV</button>             
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
